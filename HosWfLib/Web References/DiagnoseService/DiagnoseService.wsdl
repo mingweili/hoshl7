@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://hl7.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://hl7.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://hl7.org/">
+      <s:element name="stratTreatWf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientStrID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="stratTreatWfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stratTreatWfResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnTriage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientStrID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnTriageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OnTriageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnDianoseCompleted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientStrID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnDianoseCompletedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OnDianoseCompletedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="stratTreatWfSoapIn">
+    <wsdl:part name="parameters" element="tns:stratTreatWf" />
+  </wsdl:message>
+  <wsdl:message name="stratTreatWfSoapOut">
+    <wsdl:part name="parameters" element="tns:stratTreatWfResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnTriageSoapIn">
+    <wsdl:part name="parameters" element="tns:OnTriage" />
+  </wsdl:message>
+  <wsdl:message name="OnTriageSoapOut">
+    <wsdl:part name="parameters" element="tns:OnTriageResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnDianoseCompletedSoapIn">
+    <wsdl:part name="parameters" element="tns:OnDianoseCompleted" />
+  </wsdl:message>
+  <wsdl:message name="OnDianoseCompletedSoapOut">
+    <wsdl:part name="parameters" element="tns:OnDianoseCompletedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DiagnoseServiceSoap">
+    <wsdl:operation name="stratTreatWf">
+      <wsdl:input message="tns:stratTreatWfSoapIn" />
+      <wsdl:output message="tns:stratTreatWfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnTriage">
+      <wsdl:input message="tns:OnTriageSoapIn" />
+      <wsdl:output message="tns:OnTriageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnDianoseCompleted">
+      <wsdl:input message="tns:OnDianoseCompletedSoapIn" />
+      <wsdl:output message="tns:OnDianoseCompletedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DiagnoseServiceSoap" type="tns:DiagnoseServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="stratTreatWf">
+      <soap:operation soapAction="http://hl7.org/stratTreatWf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnTriage">
+      <soap:operation soapAction="http://hl7.org/OnTriage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnDianoseCompleted">
+      <soap:operation soapAction="http://hl7.org/OnDianoseCompleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DiagnoseServiceSoap12" type="tns:DiagnoseServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="stratTreatWf">
+      <soap12:operation soapAction="http://hl7.org/stratTreatWf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnTriage">
+      <soap12:operation soapAction="http://hl7.org/OnTriage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnDianoseCompleted">
+      <soap12:operation soapAction="http://hl7.org/OnDianoseCompleted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DiagnoseService">
+    <wsdl:port name="DiagnoseServiceSoap" binding="tns:DiagnoseServiceSoap">
+      <soap:address location="http://localhost:55488/DiagnoseService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DiagnoseServiceSoap12" binding="tns:DiagnoseServiceSoap12">
+      <soap12:address location="http://localhost:55488/DiagnoseService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

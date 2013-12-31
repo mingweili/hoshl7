@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HosWfLib", "HosWfLib\HosWfLib.csproj", "{156B32D5-356C-4627-9578-2581D7CC704A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HosWfLocalServices", "HosWfInterface\HosWfLocalServices.csproj", "{1FBD30B1-771C-4A93-834D-FDC92A743D04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HosWebServiceLib", "HosWebServiceLib\HosWebServiceLib.csproj", "{6D6D5156-ABEA-4203-8033-FE6EEC15D886}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{156B32D5-356C-4627-9578-2581D7CC704A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156B32D5-356C-4627-9578-2581D7CC704A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156B32D5-356C-4627-9578-2581D7CC704A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156B32D5-356C-4627-9578-2581D7CC704A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FBD30B1-771C-4A93-834D-FDC92A743D04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FBD30B1-771C-4A93-834D-FDC92A743D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FBD30B1-771C-4A93-834D-FDC92A743D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FBD30B1-771C-4A93-834D-FDC92A743D04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6D5156-ABEA-4203-8033-FE6EEC15D886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6D5156-ABEA-4203-8033-FE6EEC15D886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6D5156-ABEA-4203-8033-FE6EEC15D886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6D5156-ABEA-4203-8033-FE6EEC15D886}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

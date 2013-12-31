@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Services;
+using System.Web.Services.Protocols;
+using System.Xml.Linq;
+
+using Hos.WorkFlow;
+using Hos.WorkFlow.LocalServices;
+using Hos.WebService;
+
+namespace Hos.WebService
+{
+    /// <summary>
+    /// TriageService 的摘要说明
+    /// </summary>
+    [WebService(Namespace = "http://hl7.org/")]
+    [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+    [ToolboxItem(false)]
+    // 若要允许使用 ASP.NET AJAX 从脚本中调用此 Web 服务，请取消对下行的注释。
+    // [System.Web.Script.Services.ScriptService]
+    public class TriageService : System.Web.Services.WebService
+    {
+
+        [WebMethod]
+        public string OnTriage(string patientStrID)
+        {
+            Guid patientGuid = new Guid(patientStrID);
+             Guid? WfGuid = Global.patientCollection.GetWorkFlowFromPatient(patientGuid, WorkflowType.TREAT_CHILD);
+
+             if (WfGuid.HasValue)
+            {
+                TriageCompletedEventArgs args = new TriageCompletedEventArgs(WfGuid.Value);
+                args.DepartmentID = "肠胃科";
+                args.WaitForIdle = true;
+
+                Global.wfLocalServices.OnTriageCompleted(args);
+
+                return "分诊到肠胃科";
+            } 
+            else
+            {
+                return "失败鸟";
+            }
+           
+
+        }
+    }
+}

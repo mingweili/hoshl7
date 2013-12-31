@@ -1,0 +1,79 @@
+﻿<StateMachineWorkflowDesigner xmlns:ns0="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Name="WfTreat" Location="30, 30" Size="1141, 515" AutoSizeMargin="16, 24" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<StateMachineWorkflowDesigner.DesignerConnectors>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="分诊" SourceConnectionIndex="0" TargetConnectionEdge="Top" SetStateName="setStateActivity1" SourceStateName="初始状态" SourceConnectionEdge="Right" TargetActivity="分诊" SourceActivity="初始状态" EventHandlerName="stateInitializationActivity1">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="242" Y="115" />
+				<ns0:Point X="258" Y="115" />
+				<ns0:Point X="258" Y="158" />
+				<ns0:Point X="126" Y="158" />
+				<ns0:Point X="126" Y="167" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="就诊" SourceConnectionIndex="0" TargetConnectionEdge="Top" SetStateName="setStateActivity2" SourceStateName="分诊" SourceConnectionEdge="Right" TargetActivity="就诊" SourceActivity="分诊" EventHandlerName="等待分诊结果">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="165" Y="211" />
+				<ns0:Point X="213" Y="211" />
+				<ns0:Point X="213" Y="257" />
+				<ns0:Point X="126" Y="257" />
+				<ns0:Point X="126" Y="263" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+	</StateMachineWorkflowDesigner.DesignerConnectors>
+	<StateMachineWorkflowDesigner.Designers>
+		<StateDesigner Name="初始状态" Location="46, 71" Size="200, 80" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Size="150, 146" Name="stateInitializationActivity1" Location="54, 104">
+					<StateInitializationDesigner.Designers>
+						<SetStateDesigner Size="130, 62" Name="setStateActivity1" Location="64, 169" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="分诊" Location="46, 167" Size="160, 80" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Size="381, 446" Name="等待分诊结果" Location="54, 200">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 41" Name="接收分诊结果" Location="179, 265" />
+						<IfElseDesigner Size="361, 221" Name="分诊分支" Location="64, 325">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Size="150, 118" Name="分诊至肠胃科" Location="83, 399" />
+								<IfElseBranchDesigner Size="150, 118" Name="分诊至其他" Location="256, 399" />
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+						<SetStateDesigner Size="130, 62" Name="setStateActivity2" Location="179, 565" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="就诊" Location="46, 263" Size="160, 80" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Size="612, 612" Name="等待就诊完成" Location="54, 296">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 41" Name="接收就诊结果" Location="295, 361" />
+						<IfElseDesigner Size="592, 408" Name="是否需要检查" Location="64, 421">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Size="150, 305" Name="需要检查" Location="83, 495">
+									<IfElseBranchDesigner.Designers>
+										<CodeDesigner Size="130, 41" Name="开启体检工作流" Location="93, 560" />
+										<HandleExternalEventActivityDesigner Size="130, 44" Name="等待体检工作流结束" Location="93, 620" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Size="381, 305" Name="不需要检查" Location="256, 495">
+									<IfElseBranchDesigner.Designers>
+										<IfElseDesigner Size="361, 221" Name="是否需要住院" Location="266, 560">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Size="150, 118" Name="需要住院" Location="285, 634" />
+												<IfElseBranchDesigner Size="150, 118" Name="不需要住院" Location="458, 634" />
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+						<InvokeWebServiceDesigner Size="130, 41" Name="让主工作流跳转" Location="295, 848" URL="http://localhost:55488/ParentServices.asmx" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+	</StateMachineWorkflowDesigner.Designers>
+</StateMachineWorkflowDesigner>

@@ -1,0 +1,10 @@
+D:\俱乐部\08开发HL7\NewHos\HosWfInterface\bin\Debug\HosWfInterface.dll
+D:\俱乐部\08开发HL7\NewHos\HosWfInterface\bin\Debug\HosWfInterface.pdb
+D:\俱乐部\08开发HL7\NewHos\HosWfInterface\obj\Debug\ResolveAssemblyReference.cache
+D:\俱乐部\08开发HL7\NewHos\HosWfInterface\obj\Debug\HosWfInterface.dll
+D:\俱乐部\08开发HL7\NewHos\HosWfInterface\obj\Debug\HosWfInterface.pdb
+E:\WeRun\HL7\NewHos\HosWfInterface\bin\Debug\HosWfInterface.dll
+E:\WeRun\HL7\NewHos\HosWfInterface\bin\Debug\HosWfInterface.pdb
+E:\WeRun\HL7\NewHos\HosWfInterface\obj\Debug\ResolveAssemblyReference.cache
+E:\WeRun\HL7\NewHos\HosWfInterface\obj\Debug\HosWfInterface.dll
+E:\WeRun\HL7\NewHos\HosWfInterface\obj\Debug\HosWfInterface.pdb

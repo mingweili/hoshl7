@@ -1,0 +1,59 @@
+﻿<StateMachineWorkflowDesigner xmlns:ns0="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Name="WfTreat" Location="30, 30" Size="1141, 555" AutoSize="False" AutoSizeMargin="16, 24" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<StateMachineWorkflowDesigner.DesignerConnectors>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="分诊" SourceConnectionIndex="0" TargetConnectionEdge="Top" SetStateName="setStateActivity1" SourceStateName="初始状态" SourceConnectionEdge="Right" TargetActivity="分诊" SourceActivity="初始状态" EventHandlerName="初始化">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="129" Y="115" />
+				<ns0:Point X="257" Y="115" />
+				<ns0:Point X="257" Y="158" />
+				<ns0:Point X="127" Y="158" />
+				<ns0:Point X="127" Y="167" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="就诊" SourceConnectionIndex="0" TargetConnectionEdge="Top" SetStateName="setStateActivity2" SourceStateName="分诊" SourceConnectionEdge="Right" TargetActivity="就诊" SourceActivity="分诊" EventHandlerName="等待分诊结果">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="166" Y="211" />
+				<ns0:Point X="214" Y="211" />
+				<ns0:Point X="214" Y="275" />
+				<ns0:Point X="126" Y="275" />
+				<ns0:Point X="126" Y="287" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+	</StateMachineWorkflowDesigner.DesignerConnectors>
+	<StateMachineWorkflowDesigner.Designers>
+		<StateDesigner Name="初始状态" Location="47, 71" Size="200, 80" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Size="150, 146" Name="初始化" Location="55, 104">
+					<StateInitializationDesigner.Designers>
+						<SetStateDesigner Size="130, 62" Name="setStateActivity1" Location="65, 169" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="分诊" Location="47, 167" Size="160, 80" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Size="381, 446" Name="等待分诊结果" Location="55, 200">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 41" Name="接收分诊结果" Location="180, 265" />
+						<IfElseDesigner Size="361, 221" Name="分诊分支" Location="65, 325">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Size="150, 118" Name="分诊至肠胃科" Location="84, 399" />
+								<IfElseBranchDesigner Size="150, 118" Name="分诊至其他" Location="257, 399" />
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+						<SetStateDesigner Size="130, 62" Name="setStateActivity2" Location="180, 565" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="就诊" Location="46, 287" Size="160, 80" AutoSize="False" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Size="150, 188" Name="等待就诊完成" Location="54, 320">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 41" Name="接收就诊结果" Location="64, 385" />
+						<CodeDesigner Size="130, 44" Name="通知主工作流结束" Location="64, 445" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+	</StateMachineWorkflowDesigner.Designers>
+</StateMachineWorkflowDesigner>

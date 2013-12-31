@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="ParentServices.asmx.cs" Class="HosWebServiceLib.Service1" %>

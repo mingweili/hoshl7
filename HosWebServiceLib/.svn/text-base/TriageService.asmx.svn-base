@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="TriageService.asmx.cs" Class="Hos.WebService.TriageService" %>

@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Services;
+
+using System.Workflow.Activities;
+using System.Workflow.ComponentModel;
+using System.Workflow.Runtime;
+
+using Hos.WorkFlow;
+
+namespace Hos.WebService
+{
+    /// <summary>
+    /// TreatService 的摘要说明
+    /// </summary>
+    [WebService(Namespace = "http://hl7.org/")]
+    [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+    [System.ComponentModel.ToolboxItem(false)]
+    // 若要允许使用 ASP.NET AJAX 从脚本中调用此 Web 服务，请取消对下行的注释。
+    // [System.Web.Script.Services.ScriptService]
+    public class TreatService : System.Web.Services.WebService
+    {
+
+        [WebMethod]
+        public string stratTreatWf(string patientStrID)
+        {
+            Guid patientGuidID = new Guid(patientStrID);
+
+            Dictionary<String, Object> wfArguments = new Dictionary<String, Object>();
+            //wfArguments.Add("parentWfID", parentWfID);
+            wfArguments.Add("patientStrID", patientStrID);
+
+            WorkflowInstance wfInstantce = Global.wfRuntime.CreateWorkflow(typeof(Hos.WorkFlow.WfTreat), wfArguments);
+
+            wfInstantce.Start();
+
+            //在工作流的管理端保存的病人的集合
+            Global.patientCollection.Add(patientGuidID, wfInstantce.InstanceId, WorkflowType.TREAT_CHILD);
+
+            return "Treat工作流已启动";
+        }
+    }
+}

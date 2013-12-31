@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://hl7.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://hl7.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://hl7.org/">
+      <s:element name="getAllPatientID">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllPatientIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllPatientIDResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="startMainWf">
+        <s:complexType />
+      </s:element>
+      <s:element name="startMainWfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startMainWfResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnChargeCompleted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientStrID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnChargeCompletedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OnChargeCompletedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnRegisterCompleted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientStrID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnRegisterCompletedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OnRegisterCompletedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnDiagnoseCompleted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientStrID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="direction" type="tns:DiagnoseDirection" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="DiagnoseDirection">
+        <s:restriction base="s:string">
+          <s:enumeration value="Examination" />
+          <s:enumeration value="Treat" />
+          <s:enumeration value="Medicine" />
+          <s:enumeration value="Complete" />
+          <s:enumeration value="Hospitalization" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="OnDiagnoseCompletedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OnDiagnoseCompletedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnMedicalAdviceCompleted">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientStrID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnMedicalAdviceCompletedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OnMedicalAdviceCompletedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getAllPatientIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllPatientID" />
+  </wsdl:message>
+  <wsdl:message name="getAllPatientIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllPatientIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="startMainWfSoapIn">
+    <wsdl:part name="parameters" element="tns:startMainWf" />
+  </wsdl:message>
+  <wsdl:message name="startMainWfSoapOut">
+    <wsdl:part name="parameters" element="tns:startMainWfResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnChargeCompletedSoapIn">
+    <wsdl:part name="parameters" element="tns:OnChargeCompleted" />
+  </wsdl:message>
+  <wsdl:message name="OnChargeCompletedSoapOut">
+    <wsdl:part name="parameters" element="tns:OnChargeCompletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnRegisterCompletedSoapIn">
+    <wsdl:part name="parameters" element="tns:OnRegisterCompleted" />
+  </wsdl:message>
+  <wsdl:message name="OnRegisterCompletedSoapOut">
+    <wsdl:part name="parameters" element="tns:OnRegisterCompletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnDiagnoseCompletedSoapIn">
+    <wsdl:part name="parameters" element="tns:OnDiagnoseCompleted" />
+  </wsdl:message>
+  <wsdl:message name="OnDiagnoseCompletedSoapOut">
+    <wsdl:part name="parameters" element="tns:OnDiagnoseCompletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnMedicalAdviceCompletedSoapIn">
+    <wsdl:part name="parameters" element="tns:OnMedicalAdviceCompleted" />
+  </wsdl:message>
+  <wsdl:message name="OnMedicalAdviceCompletedSoapOut">
+    <wsdl:part name="parameters" element="tns:OnMedicalAdviceCompletedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="getAllPatientID">
+      <wsdl:input message="tns:getAllPatientIDSoapIn" />
+      <wsdl:output message="tns:getAllPatientIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="startMainWf">
+      <wsdl:input message="tns:startMainWfSoapIn" />
+      <wsdl:output message="tns:startMainWfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnChargeCompleted">
+      <wsdl:input message="tns:OnChargeCompletedSoapIn" />
+      <wsdl:output message="tns:OnChargeCompletedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnRegisterCompleted">
+      <wsdl:input message="tns:OnRegisterCompletedSoapIn" />
+      <wsdl:output message="tns:OnRegisterCompletedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnDiagnoseCompleted">
+      <wsdl:input message="tns:OnDiagnoseCompletedSoapIn" />
+      <wsdl:output message="tns:OnDiagnoseCompletedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnMedicalAdviceCompleted">
+      <wsdl:input message="tns:OnMedicalAdviceCompletedSoapIn" />
+      <wsdl:output message="tns:OnMedicalAdviceCompletedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllPatientID">
+      <soap:operation soapAction="http://hl7.org/getAllPatientID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="startMainWf">
+      <soap:operation soapAction="http://hl7.org/startMainWf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnChargeCompleted">
+      <soap:operation soapAction="http://hl7.org/OnChargeCompleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnRegisterCompleted">
+      <soap:operation soapAction="http://hl7.org/OnRegisterCompleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnDiagnoseCompleted">
+      <soap:operation soapAction="http://hl7.org/OnDiagnoseCompleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnMedicalAdviceCompleted">
+      <soap:operation soapAction="http://hl7.org/OnMedicalAdviceCompleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllPatientID">
+      <soap12:operation soapAction="http://hl7.org/getAllPatientID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="startMainWf">
+      <soap12:operation soapAction="http://hl7.org/startMainWf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnChargeCompleted">
+      <soap12:operation soapAction="http://hl7.org/OnChargeCompleted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnRegisterCompleted">
+      <soap12:operation soapAction="http://hl7.org/OnRegisterCompleted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnDiagnoseCompleted">
+      <soap12:operation soapAction="http://hl7.org/OnDiagnoseCompleted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnMedicalAdviceCompleted">
+      <soap12:operation soapAction="http://hl7.org/OnMedicalAdviceCompleted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:55488/ParentServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:55488/ParentServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

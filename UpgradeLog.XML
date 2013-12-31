@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="NewHos">
+</Property><Property Name="解决方案文件" Value="D:\俱乐部\08开发HL7\NewHos\NewHos.sln">
+</Property><Property Name="用户选项文件" Value="D:\俱乐部\08开发HL7\NewHos\NewHos.suo">
+</Property><Property Name="Date" Value="2010-08-23">
+</Property><Property Name="Time" Value="21:52">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="NewHos.sln" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\NewHos.sln">
+</Event><Event ErrorLevel="0" Project="" Source="NewHos.suo" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\NewHos.suo">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\HosWfLib.csproj" Description="项目文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\HosWfLib.csproj">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\HosWfLib.csproj.user" Description="项目用户文件成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\HosWfLib.csproj.user">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\PatientState.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\PatientState.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Program.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Program.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Properties\AssemblyInfo.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Properties\Settings.Designer.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Web References\DiagnoseService\Reference.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Web References\DiagnoseService\Reference.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Web References\ParentServices\Reference.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Web References\ParentServices\Reference.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\WfMain.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\WfMain.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\WfMain.designer.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\WfMain.designer.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\WfTreat.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\WfTreat.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\WfTreat.designer.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\WfTreat.designer.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Properties\Settings.settings" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\app.config" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\app.config">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Web References\DiagnoseService\DiagnoseService.wsdl" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Web References\DiagnoseService\DiagnoseService.wsdl">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Web References\DiagnoseService\DiagnoseService.disco" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Web References\DiagnoseService\DiagnoseService.disco">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Web References\DiagnoseService\Reference.map" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Web References\DiagnoseService\Reference.map">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Web References\ParentServices\ParentServices.wsdl" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Web References\ParentServices\ParentServices.wsdl">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Web References\ParentServices\ParentServices.disco" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Web References\ParentServices\ParentServices.disco">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\Web References\ParentServices\Reference.map" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\Web References\ParentServices\Reference.map">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\WfMain.layout" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\WfMain.layout">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\WfMain.resx" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\WfMain.resx">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\WfMain.rules" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\WfMain.rules">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\WfTreat.layout" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\WfTreat.layout">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\WfTreat.rules" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\WfTreat.rules">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\WfTreat.resx" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfLib\WfTreat.resx">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\HosWfLib.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="HosWfLib" Source="HosWfLib\HosWfLib.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="HosWfLocalServices" Source="HosWfInterface\HosWfLocalServices.csproj" Description="项目文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfInterface\HosWfLocalServices.csproj">
+</Event><Event ErrorLevel="0" Project="HosWfLocalServices" Source="HosWfInterface\Event\WfEvents.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfInterface\Event\WfEvents.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLocalServices" Source="HosWfInterface\IInvokeChildWf.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfInterface\IInvokeChildWf.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLocalServices" Source="HosWfInterface\IWfLocalServices.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfInterface\IWfLocalServices.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLocalServices" Source="HosWfInterface\Properties\AssemblyInfo.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfInterface\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLocalServices" Source="HosWfInterface\WfLocalServices.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWfInterface\WfLocalServices.cs">
+</Event><Event ErrorLevel="0" Project="HosWfLocalServices" Source="HosWfInterface\HosWfLocalServices.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="HosWfLocalServices" Source="HosWfInterface\HosWfLocalServices.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\HosWebServiceLib.csproj" Description="项目文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\HosWebServiceLib.csproj">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\HosWebServiceLib.csproj.user" Description="项目用户文件成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\HosWebServiceLib.csproj.user">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\DiagnoseService.asmx.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\DiagnoseService.asmx.cs">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\Global.asax.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\Global.asax.cs">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\ParentServices.asmx.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\ParentServices.asmx.cs">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\PatientCollection.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\PatientCollection.cs">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\Properties\AssemblyInfo.cs" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\DiagnoseService.asmx" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\DiagnoseService.asmx">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\Global.asax" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\Global.asax">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\ParentServices.asmx" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\ParentServices.asmx">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\Web.config" Description="文件已成功备份为 D:\俱乐部\08开发HL7\NewHos\Backup\HosWebServiceLib\Web.config">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\HosWebServiceLib.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="HosWebServiceLib" Source="HosWebServiceLib\HosWebServiceLib.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="NewHos.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="NewHos.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="HosWfLib" Source="HosWfLib\HosWfLib.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="HosWfLocalServices" Source="HosWfInterface\HosWfLocalServices.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="HosWebServiceLib" Source="HosWebServiceLib\HosWebServiceLib.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

@@ -1,0 +1,130 @@
+﻿using System;
+using System.ComponentModel;
+using System.Workflow.ComponentModel;
+using System.Workflow.Activities;
+using Hos.WorkFlow.LocalServices;
+
+
+
+namespace Hos.WorkFlow
+{
+    public sealed partial class WfTreat : StateMachineWorkflowActivity
+    {
+        public TriageCompletedEventArgs triageCompletedEventArgs = default(TriageCompletedEventArgs);
+        public DiagnoseCompletedEventArgs diagnoseCompletedEventArgs = default(DiagnoseCompletedEventArgs);
+
+        public string patientStrID { get; set; }
+        //public Guid parentWfID { get; set; }
+
+        public WfTreat()
+        {
+            InitializeComponent();
+        }
+
+        public static DependencyProperty 接收就诊结果_sender1Property = DependencyProperty.Register("接收就诊结果_sender1", typeof(System.Object), typeof(Hos.WorkFlow.WfTreat));
+
+        [DesignerSerializationVisibilityAttribute(DesignerSerializationVisibility.Visible)]
+        [BrowsableAttribute(true)]
+        [CategoryAttribute("参数")]
+        public Object 接收就诊结果_sender1
+        {
+            get
+            {
+                return ((object)(base.GetValue(Hos.WorkFlow.WfTreat.接收就诊结果_sender1Property)));
+            }
+            set
+            {
+                base.SetValue(Hos.WorkFlow.WfTreat.接收就诊结果_sender1Property, value);
+            }
+        }
+
+        public static DependencyProperty 接收就诊结果_Roles1Property = DependencyProperty.Register("接收就诊结果_Roles1", typeof(System.Workflow.Activities.WorkflowRoleCollection), typeof(Hos.WorkFlow.WfTreat));
+
+        [DesignerSerializationVisibilityAttribute(DesignerSerializationVisibility.Visible)]
+        [BrowsableAttribute(true)]
+        [CategoryAttribute("活动")]
+        public WorkflowRoleCollection 接收就诊结果_Roles1
+        {
+            get
+            {
+                return ((System.Workflow.Activities.WorkflowRoleCollection)(base.GetValue(Hos.WorkFlow.WfTreat.接收就诊结果_Roles1Property)));
+            }
+            set
+            {
+                base.SetValue(Hos.WorkFlow.WfTreat.接收就诊结果_Roles1Property, value);
+            }
+        }
+
+        public static DependencyProperty 接收就诊结果_Invoked1Event = DependencyProperty.Register("接收就诊结果_Invoked1", typeof(System.EventHandler<System.Workflow.Activities.ExternalDataEventArgs>), typeof(Hos.WorkFlow.WfTreat));
+
+        [DesignerSerializationVisibilityAttribute(DesignerSerializationVisibility.Visible)]
+        [BrowsableAttribute(true)]
+        [CategoryAttribute("处理程序")]
+        public event EventHandler<ExternalDataEventArgs> 接收就诊结果_Invoked1
+        {
+            add
+            {
+                base.AddHandler(接收就诊结果_Invoked1Event, value);
+            }
+            remove
+            {
+                base.RemoveHandler(接收就诊结果_Invoked1Event, value);
+            }
+        }
+
+        private void 通知转到检查状态_ExecuteCode(object sender, EventArgs e)
+        {
+            //通知主工作流就诊状态结束，转到检查状态
+            //             DiagnoseCompletedEventArgs args = new DiagnoseCompletedEventArgs(ParentWfID);
+            //             args.NextDirection = DiagnoseDirection.Examination;
+            //             args.WaitForIdle = true;
+            // 
+            //             DiagnoseCompleted(null, args);
+        }
+
+        //         #region IWfLocalServices 成员
+        // 
+        //         public event EventHandler<ChargeCompletedEventArgs> ChargeCompleted;
+        // 
+        //         public event EventHandler<RegisterCompletedEventArgs> RegisterCompleted;
+        // 
+        //         public event EventHandler<MedicalAdviceCompletedEventArgs> MedicalAdviceCompleted;
+        // 
+        //         public event EventHandler<TreatCompletedEventArgs> TreatCompleted;
+        // 
+        //         public event EventHandler<TriageCompletedEventArgs> TriageCompleted;
+        // 
+        //         public event EventHandler<DiagnoseCompletedEventArgs> DiagnoseCompleted;
+        // 
+        //         public void OnSendMessage(string message)
+        //         {
+        //             throw new NotImplementedException();
+        //         }
+        // 
+        //         #endregion
+        // 
+        //         private void 处理主工作流的触发_Invoked(object sender, ExternalDataEventArgs e)
+        //         {
+        // 
+        //         }
+        // 
+        //         private void 接收主工作流的触发_Invoked(object sender, ExternalDataEventArgs e)
+        //         {
+        //             PatientID = Global.patientCollection.GetPatientFromWorkFlow(this.WorkflowInstanceId).Value;
+        //         }
+
+        private void 通知主工作流就诊结束_ExecuteCode(object sender, EventArgs e)
+        {
+            //             Guid? ParentWfID =
+            //                 Global.patientCollection.GetWorkFlowFromPatient(patientGuidID, WorkflowType.PARENT);
+            //             if (ParentWfID.HasValue)
+            //             {
+            //                 TreatCompletedEventArgs args = new TreatCompletedEventArgs(ParentWfID.Value);
+            //                 args.WaitForIdle = true;
+            // 
+            //                 Global.wfLocalServices.OnTreatCompleted(args);
+            //             }
+        }
+    }
+
+}
